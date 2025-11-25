@@ -7,7 +7,7 @@ import { ThemeContext } from "../context/ThemeContext.jsx";
 export default function Header() {
   const { user, logout } = useContext(AuthContext);
   const { cart } = useContext(CartContext);
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <header className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
@@ -17,10 +17,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
 
           {/* Theme toggle */}
-          <button
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            className="p-2 rounded bg-gray-200 dark:bg-gray-700"
-          >
+          <button onClick={toggleTheme} className="p-2 rounded bg-gray-200 dark:bg-gray-700">
             {theme === "light" ? "🌙" : "☀️"}
           </button>
 
