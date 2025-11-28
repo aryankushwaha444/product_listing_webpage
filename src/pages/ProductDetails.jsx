@@ -21,9 +21,13 @@ export default function ProductDetails() {
         <img src={product.image} className="w-60 mx-auto" alt="" />
 
         <div>
-          <h2 className="text-2xl font-semibold dark:text-white">{product.title}</h2>
+          <h2 className="text-2xl font-semibold dark:text-white">
+            {product.title}
+          </h2>
           <p className="text-green-600 text-xl font-bold">${product.price}</p>
-          <p className="mt-3 text-gray-600 dark:text-gray-300">{product.description}</p>
+          <p className="mt-3 text-gray-600 dark:text-gray-300">
+            {product.description}
+          </p>
 
           <button
             onClick={() => addToCart(product)}
